@@ -1,23 +1,21 @@
 package com.game.hobby.werkzeuge.GameScreenWerkzeug;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import javax.swing.JProgressBar;
+import javax.swing.SwingConstants;
 
 public class GameScreenWerkzeugUI {
 
@@ -29,9 +27,6 @@ public class GameScreenWerkzeugUI {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	private JTextField textField_3;
-
-	private int _achor_left = 10;
 
 	/**
 	 * 
@@ -42,169 +37,204 @@ public class GameScreenWerkzeugUI {
 		_frame = new JFrame();
 		_frame.setTitle(TITEL);
 		_frame.getContentPane().setLayout(new BorderLayout(0, 0));
-
-		JPanel panel_south = new JPanel();
-		_frame.getContentPane().add(panel_south, BorderLayout.SOUTH);
-		panel_south.setLayout(new BorderLayout(0, 0));
-
-		textField_1 = new JTextField();
-		panel_south.add(textField_1, BorderLayout.CENTER);
-		textField_1.setColumns(10);
-
-		JButton btnNewButton = new JButton("Aktion");
-		panel_south.add(btnNewButton, BorderLayout.EAST);
-
-		JPanel panel_west = new JPanel();
-		_frame.getContentPane().add(panel_west, BorderLayout.WEST);
-		panel_west.setLayout(new BorderLayout(0, 0));
-
-		JPanel panel_east = new JPanel();
-		panel_east.setForeground(Color.BLACK);
-		panel_east.setBackground(Color.WHITE);
-		_frame.getContentPane().add(panel_east, BorderLayout.EAST);
-		GridBagLayout gbl_panel_east = new GridBagLayout();
-		gbl_panel_east.columnWidths = new int[] { 0, 0, 0 };
-		gbl_panel_east.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-		gbl_panel_east.columnWeights = new double[] { 1.0, Double.MIN_VALUE, 1.0 };
-		gbl_panel_east.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
-		panel_east.setLayout(gbl_panel_east);
-
-		JLabel lblLandkarte = new JLabel("Landkarte");
-		lblLandkarte.setForeground(Color.BLACK);
-		lblLandkarte.setFont(new Font("Monospaced", Font.BOLD, 18));
-		GridBagConstraints gbc_lblLandkarte = new GridBagConstraints();
-		gbc_lblLandkarte.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_lblLandkarte.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblLandkarte.gridx = 1;
-		gbc_lblLandkarte.gridy = 0;
-		panel_east.add(lblLandkarte, gbc_lblLandkarte);
-
-		JLabel lblNewLabel = new JLabel("X-Koordinate");
-		lblNewLabel.setFont(new Font("Monospaced", Font.PLAIN, 18));
-		lblNewLabel.setForeground(Color.BLACK);
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblNewLabel.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_lblNewLabel.gridx = 1;
-		gbc_lblNewLabel.gridy = 1;
-		panel_east.add(lblNewLabel, gbc_lblNewLabel);
-
-		textField_2 = new JTextField();
-		textField_2.setEditable(false);
-		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
-		gbc_textField_2.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_2.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_textField_2.anchor = GridBagConstraints.NORTH;
-		gbc_textField_2.gridx = 2;
-		gbc_textField_2.gridy = 1;
-		panel_east.add(textField_2, gbc_textField_2);
-		textField_2.setColumns(10);
-
-		JLabel lblYkoordinate = new JLabel("Y-Koordinate");
-		lblYkoordinate.setFont(new Font("Monospaced", Font.PLAIN, 18));
-		lblYkoordinate.setForeground(Color.BLACK);
-		GridBagConstraints gbc_lblYkoordinate = new GridBagConstraints();
-		gbc_lblYkoordinate.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblYkoordinate.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_lblYkoordinate.gridx = 1;
-		gbc_lblYkoordinate.gridy = 2;
-		panel_east.add(lblYkoordinate, gbc_lblYkoordinate);
-
-		textField_3 = new JTextField();
-		textField_3.setEditable(false);
-		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
-		gbc_textField_3.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_3.gridx = 2;
-		gbc_textField_3.gridy = 2;
-		panel_east.add(textField_3, gbc_textField_3);
-		textField_3.setColumns(10);
-
-		JLabel lblCharakter = new JLabel("Charakter");
-		lblCharakter.setForeground(Color.BLACK);
-		lblCharakter.setFont(new Font("Monospaced", Font.BOLD, 18));
-		GridBagConstraints gbc_lblCharakter = new GridBagConstraints();
-		gbc_lblCharakter.anchor = GridBagConstraints.WEST;
-		gbc_lblCharakter.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_lblCharakter.gridx = 1;
-		gbc_lblCharakter.gridy = 4;
-		panel_east.add(lblCharakter, gbc_lblCharakter);
-
+		
+		JPanel _hauptAnzeigeWerkzeug = new JPanel();
+		_frame.getContentPane().add(_hauptAnzeigeWerkzeug, BorderLayout.CENTER);
+		_hauptAnzeigeWerkzeug.setLayout(new BorderLayout(0, 0));
+		
+		JPanel _KommandoZeilenWerkzeug = new JPanel();
+		_hauptAnzeigeWerkzeug.add(_KommandoZeilenWerkzeug, BorderLayout.SOUTH);
+		_KommandoZeilenWerkzeug.setLayout(new BorderLayout(0, 0));
+		
+		textField = new JTextField();
+		_KommandoZeilenWerkzeug.add(textField);
+		textField.setColumns(10);
+		
+		JButton btnSenden = new JButton("Senden");
+		_KommandoZeilenWerkzeug.add(btnSenden, BorderLayout.EAST);
+		
+		JPanel _textAnzeigeEigenschaftenWerkzeug = new JPanel();
+		_hauptAnzeigeWerkzeug.add(_textAnzeigeEigenschaftenWerkzeug, BorderLayout.EAST);
+		GridBagLayout gbl__textAnzeigeEigenschaftenWerkzeug = new GridBagLayout();
+		gbl__textAnzeigeEigenschaftenWerkzeug.columnWidths = new int[]{0, 0, 0};
+		gbl__textAnzeigeEigenschaftenWerkzeug.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl__textAnzeigeEigenschaftenWerkzeug.columnWeights = new double[]{1.0, 1.0, 1.0};
+		gbl__textAnzeigeEigenschaftenWerkzeug.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		_textAnzeigeEigenschaftenWerkzeug.setLayout(gbl__textAnzeigeEigenschaftenWerkzeug);
+		
+		JLabel lblName = new JLabel("Name");
+		lblName.setHorizontalAlignment(SwingConstants.LEFT);
+		GridBagConstraints gbc_lblName = new GridBagConstraints();
+		gbc_lblName.anchor = GridBagConstraints.WEST;
+		gbc_lblName.insets = new Insets(5, 15, 5, 15);
+		gbc_lblName.gridx = 0;
+		gbc_lblName.gridy = 0;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblName, gbc_lblName);
+		
+		JLabel lblNamensanzeige = new JLabel("Namensanzeige");
+		GridBagConstraints gbc_lblNamensanzeige = new GridBagConstraints();
+		gbc_lblNamensanzeige.anchor = GridBagConstraints.WEST;
+		gbc_lblNamensanzeige.insets = new Insets(0, 0, 5, 0);
+		gbc_lblNamensanzeige.gridx = 2;
+		gbc_lblNamensanzeige.gridy = 0;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblNamensanzeige, gbc_lblNamensanzeige);
+		
 		JLabel lblGesundheit = new JLabel("Gesundheit");
-		lblGesundheit.setFont(new Font("Monospaced", Font.PLAIN, 18));
-		lblGesundheit.setForeground(Color.BLACK);
+		lblGesundheit.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblGesundheit = new GridBagConstraints();
-		gbc_lblGesundheit.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblGesundheit.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_lblGesundheit.gridx = 1;
-		gbc_lblGesundheit.gridy = 5;
-		panel_east.add(lblGesundheit, gbc_lblGesundheit);
-
+		gbc_lblGesundheit.anchor = GridBagConstraints.WEST;
+		gbc_lblGesundheit.insets = new Insets(0, 0, 5, 5);
+		gbc_lblGesundheit.gridx = 0;
+		gbc_lblGesundheit.gridy = 1;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblGesundheit, gbc_lblGesundheit);
+		
 		JProgressBar progressBar = new JProgressBar();
-		progressBar.setForeground(new Color(128, 0, 0));
 		progressBar.setStringPainted(true);
-		progressBar.setValue(75);
 		GridBagConstraints gbc_progressBar = new GridBagConstraints();
-		gbc_progressBar.insets = new Insets(5, _achor_left, 5, 15);
+		gbc_progressBar.insets = new Insets(0, 0, 5, 0);
 		gbc_progressBar.gridx = 2;
-		gbc_progressBar.gridy = 5;
-		panel_east.add(progressBar, gbc_progressBar);
-
+		gbc_progressBar.gridy = 1;
+		_textAnzeigeEigenschaftenWerkzeug.add(progressBar, gbc_progressBar);
+		
 		JLabel lblAusdauer = new JLabel("Ausdauer");
-		lblAusdauer.setFont(new Font("Monospaced", Font.PLAIN, 18));
-		lblAusdauer.setForeground(Color.BLACK);
+		lblAusdauer.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblAusdauer = new GridBagConstraints();
-		gbc_lblAusdauer.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblAusdauer.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_lblAusdauer.gridx = 1;
-		gbc_lblAusdauer.gridy = 6;
-		panel_east.add(lblAusdauer, gbc_lblAusdauer);
-
+		gbc_lblAusdauer.anchor = GridBagConstraints.WEST;
+		gbc_lblAusdauer.insets = new Insets(0, 0, 5, 5);
+		gbc_lblAusdauer.gridx = 0;
+		gbc_lblAusdauer.gridy = 2;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblAusdauer, gbc_lblAusdauer);
+		
 		JProgressBar progressBar_1 = new JProgressBar();
-		progressBar_1.setForeground(new Color(34, 139, 34));
 		progressBar_1.setStringPainted(true);
-		progressBar_1.setToolTipText("");
-		progressBar_1.setValue(30);
 		GridBagConstraints gbc_progressBar_1 = new GridBagConstraints();
 		gbc_progressBar_1.insets = new Insets(0, 0, 5, 0);
 		gbc_progressBar_1.gridx = 2;
-		gbc_progressBar_1.gridy = 6;
-		panel_east.add(progressBar_1, gbc_progressBar_1);
+		gbc_progressBar_1.gridy = 2;
+		_textAnzeigeEigenschaftenWerkzeug.add(progressBar_1, gbc_progressBar_1);
 		
-		JButton openmap = new JButton("show Map");
-		openmap.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				JFrame mapframe = new JFrame("Map - ForgottenWorld");
-				mapframe.setSize(800, 600);
-				mapframe.setVisible(true);
-			}
-		});
-		openmap.setFont(new Font("Monospaced", Font.PLAIN, 18));
-		openmap.setForeground(Color.BLACK);
-		GridBagConstraints gbc_openmap = new GridBagConstraints();
-		gbc_openmap.anchor = GridBagConstraints.SOUTHEAST;
-		gbc_openmap.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_openmap.gridx = 1;
-		gbc_openmap.gridy = 8;
-		panel_east.add(openmap, gbc_openmap);
+		JLabel lblErfahrung = new JLabel("Erfahrung");
+		lblErfahrung.setHorizontalAlignment(SwingConstants.LEFT);
+		GridBagConstraints gbc_lblErfahrung = new GridBagConstraints();
+		gbc_lblErfahrung.anchor = GridBagConstraints.WEST;
+		gbc_lblErfahrung.insets = new Insets(0, 0, 5, 5);
+		gbc_lblErfahrung.gridx = 0;
+		gbc_lblErfahrung.gridy = 3;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblErfahrung, gbc_lblErfahrung);
+		
+		JProgressBar progressBar_2 = new JProgressBar();
+		progressBar_2.setStringPainted(true);
+		GridBagConstraints gbc_progressBar_2 = new GridBagConstraints();
+		gbc_progressBar_2.insets = new Insets(0, 0, 5, 0);
+		gbc_progressBar_2.gridx = 2;
+		gbc_progressBar_2.gridy = 3;
+		_textAnzeigeEigenschaftenWerkzeug.add(progressBar_2, gbc_progressBar_2);
+		
+		JLabel lblXkoordinate = new JLabel("X-Koordinate");
+		lblXkoordinate.setHorizontalAlignment(SwingConstants.LEFT);
+		GridBagConstraints gbc_lblXkoordinate = new GridBagConstraints();
+		gbc_lblXkoordinate.anchor = GridBagConstraints.WEST;
+		gbc_lblXkoordinate.insets = new Insets(0, 0, 5, 5);
+		gbc_lblXkoordinate.gridx = 0;
+		gbc_lblXkoordinate.gridy = 5;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblXkoordinate, gbc_lblXkoordinate);
+		
+		textField_1 = new JTextField();
+		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
+		gbc_textField_1.insets = new Insets(0, 0, 5, 0);
+		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_1.gridx = 2;
+		gbc_textField_1.gridy = 5;
+		_textAnzeigeEigenschaftenWerkzeug.add(textField_1, gbc_textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblYkoordinate = new JLabel("Y-Koordinate");
+		lblYkoordinate.setHorizontalAlignment(SwingConstants.LEFT);
+		GridBagConstraints gbc_lblYkoordinate = new GridBagConstraints();
+		gbc_lblYkoordinate.anchor = GridBagConstraints.WEST;
+		gbc_lblYkoordinate.insets = new Insets(0, 0, 5, 5);
+		gbc_lblYkoordinate.gridx = 0;
+		gbc_lblYkoordinate.gridy = 6;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblYkoordinate, gbc_lblYkoordinate);
+		
+		textField_2 = new JTextField();
+		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
+		gbc_textField_2.insets = new Insets(0, 0, 5, 0);
+		gbc_textField_2.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_2.gridx = 2;
+		gbc_textField_2.gridy = 6;
+		_textAnzeigeEigenschaftenWerkzeug.add(textField_2, gbc_textField_2);
+		textField_2.setColumns(10);
+		
+		JLabel lblOrt = new JLabel("Ort");
+		lblOrt.setHorizontalAlignment(SwingConstants.LEFT);
+		GridBagConstraints gbc_lblOrt = new GridBagConstraints();
+		gbc_lblOrt.anchor = GridBagConstraints.WEST;
+		gbc_lblOrt.insets = new Insets(0, 0, 0, 5);
+		gbc_lblOrt.gridx = 0;
+		gbc_lblOrt.gridy = 7;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblOrt, gbc_lblOrt);
+		
+		JLabel lblNewLabel = new JLabel("Teststadt");
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
+		gbc_lblNewLabel.gridx = 2;
+		gbc_lblNewLabel.gridy = 7;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblNewLabel, gbc_lblNewLabel);
 
-		JPanel panel_north = new JPanel();
-		_frame.getContentPane().add(panel_north, BorderLayout.NORTH);
-		panel_north.setLayout(new BorderLayout(0, 0));
+		JMenuBar menuBar = new JMenuBar();
+		_frame.setJMenuBar(menuBar);
 
-		JPanel panel_center = new JPanel();
-		_frame.getContentPane().add(panel_center, BorderLayout.CENTER);
-		panel_center.setLayout(new BorderLayout(0, 0));
+		JMenu mnSpiel = new JMenu("Spiel");
+		menuBar.add(mnSpiel);
 
-		JTextPane textPane = new JTextPane();
-		textPane.setPreferredSize(new Dimension(600, 850));
-		textPane.setFont(new Font("Monospaced", Font.BOLD, 20));
-		panel_center.add(textPane, BorderLayout.CENTER);
-		textPane.setBackground(Color.BLACK);
-		textPane.setForeground(Color.WHITE);
+		JMenuItem mntmNeuesSpiel = new JMenuItem("Neues Spiel...");
+		mnSpiel.add(mntmNeuesSpiel);
 
-		JScrollPane scrollPane = new JScrollPane(textPane);
-		panel_center.add(scrollPane, BorderLayout.CENTER);
+		JMenuItem mntmSpielSpeichern = new JMenuItem("Spiel speichern");
+		mnSpiel.add(mntmSpielSpeichern);
+
+		JMenu mnEinstellungen = new JMenu("Einstellungen");
+		mnSpiel.add(mnEinstellungen);
+
+		JMenuItem mntmGrafik = new JMenuItem("Grafik");
+		mnEinstellungen.add(mntmGrafik);
+
+		JMenuItem mntmSteuerung = new JMenuItem("Steuerung");
+		mnEinstellungen.add(mntmSteuerung);
+
+		JMenuItem mntmSound = new JMenuItem("Sound");
+		mnEinstellungen.add(mntmSound);
+
+		JMenuItem mntmBeenden = new JMenuItem("Beenden");
+		mnSpiel.add(mntmBeenden);
+
+		JMenu mnCharakter = new JMenu("Charakter");
+		menuBar.add(mnCharakter);
+
+		JMenuItem mntmFertigkeiten = new JMenuItem("Fertigkeiten");
+		mnCharakter.add(mntmFertigkeiten);
+
+		JMenuItem mntmEigenschaften = new JMenuItem("Eigenschaften");
+		mnCharakter.add(mntmEigenschaften);
+
+		JMenuItem mntmInventar = new JMenuItem("Inventar");
+		mnCharakter.add(mntmInventar);
+
+		JMenu mnLogbuch = new JMenu("Logbuch");
+		menuBar.add(mnLogbuch);
+
+		JMenuItem mntmAuftrge = new JMenuItem("Aufträge");
+		mnLogbuch.add(mntmAuftrge);
+
+		JMenuItem mntmEreignislog = new JMenuItem("Ereignislog");
+		mnLogbuch.add(mntmEreignislog);
+		
+		JMenu mnDebug = new JMenu("Debug");
+		menuBar.add(mnDebug);
+		
+		JMenuItem mntmWeltkarte = new JMenuItem("Weltkarte");
+		mnDebug.add(mntmWeltkarte);
 
 	}
 
@@ -223,5 +253,4 @@ public class GameScreenWerkzeugUI {
 		_frame.setVisible(false);
 		_frame.dispose();
 	}
-
 }
