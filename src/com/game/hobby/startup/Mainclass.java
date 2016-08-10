@@ -1,5 +1,8 @@
 package com.game.hobby.startup;
 
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 import com.game.hobby.materialien.World;
 import com.game.hobby.werkzeuge.GameScreenWerkzeug.GameScreenWerkzeugUI;
 
@@ -21,10 +24,27 @@ public class Mainclass {
 
 	public static void main(String[] args) {
 
+		//Nur temporÃ¤r, Swing nimmt den System Look and Feel an!
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedLookAndFeelException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		// Generiere die Welt.
 		_world = new World(300, 300, "Atlantis");
 
-		// Starte die Benutzeroberfläche.
+		// Starte die Benutzeroberflï¿½che.
 		_gui = new GameScreenWerkzeugUI();
 		_gui.zeigeFenster();
 	}
