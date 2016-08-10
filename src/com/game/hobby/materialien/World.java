@@ -6,6 +6,7 @@ package com.game.hobby.materialien;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.game.hobby.Exception.PlayerAlreadyExistsException;
 import com.game.hobby.Exception.PlayerNotInWorldExeption;
 import com.game.hobby.fachwerte.Coordinate;
 
@@ -29,10 +30,20 @@ public class World {
 		_name = name;
 		_world = new Raum[_worldwidth][_worldheight];
 	}
+	
 
-	public void add_Player(Spieler spieler, Coordinate coord) {
+	/**
+	 * Füge einen neuen Spieler in die aktuelle Welt hinzu. Wenn der Spieler
+	 * bereits vorhanden ist, werfe eine PlayerAlreadyExistsException
+	 * @param spieler
+	 * @param coord
+	 */
+	public void add_Player(Spieler spieler, Coordinate coord) throws PlayerAlreadyExistsException {
 		if (!_spielern.containsKey(spieler)) {
-
+			_spielern.put(spieler, coord);
+		} else {
+			throw new PlayerAlreadyExistsException(
+					"Spieler \"" + spieler.get_name() + "\" befindet sich bereits auf der Welt \"" + _name);
 		}
 	}
 
