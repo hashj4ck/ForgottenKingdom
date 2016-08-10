@@ -1,5 +1,7 @@
 package com.game.hobby.services;
 
+import com.game.hobby.materialien.World;
+
 /**
  * 
  * {Description of "dummy.java"}
@@ -13,5 +15,17 @@ package com.game.hobby.services;
  *
  */
 public class WorldGenerator {
-	
+	public WorldGenerator() {
+		// TODO: Über diesen Konstruktor sollen später Parametern übergeben
+		// werden können, die Einfluss auf die Weltgenerierung haben.
+	}
+
+	/**
+	 * Erstellt eine Map, in dem Räume in die leer übergebene Welt setzen.
+	 * 
+	 * @param world
+	 */
+	public void generate(World world) {
+		
+	}
 }
