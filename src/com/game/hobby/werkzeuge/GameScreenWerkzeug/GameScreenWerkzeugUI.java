@@ -8,6 +8,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -17,6 +18,9 @@ import java.awt.Insets;
 import javax.swing.JProgressBar;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import javax.swing.JTextPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.EmptyBorder;
 
 public class GameScreenWerkzeugUI {
 
@@ -246,6 +250,18 @@ public class GameScreenWerkzeugUI {
 		
 		JPanel _textAnzeigeWerkzeug = new JPanel();
 		_hauptAnzeigeWerkzeug.add(_textAnzeigeWerkzeug, BorderLayout.CENTER);
+		_textAnzeigeWerkzeug.setLayout(new BorderLayout(0, 0));
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+		_textAnzeigeWerkzeug.add(scrollPane, BorderLayout.CENTER);
+		scrollPane.setBorder(BorderFactory.createEmptyBorder());
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBackground(Color.BLACK);
+		textPane.setForeground(Color.WHITE);
+		scrollPane.setViewportView(textPane);
 
 		JMenuBar menuBar = new JMenuBar();
 		_frame.setJMenuBar(menuBar);
