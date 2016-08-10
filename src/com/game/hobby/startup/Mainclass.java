@@ -20,20 +20,13 @@ public class Mainclass {
 	private static World _world;
 
 	public static void main(String[] args) {
-		_world = generate_World();
-		start_Gui();
+
+		// Generiere die Welt.
+		_world = new World(300, 300, "Atlantis");
+
+		// Starte die Benutzeroberfläche.
+		_gui = new GameScreenWerkzeugUI();
+		_gui.zeigeFenster();
 	}
 
-	/**
-	 * @return
-	 */
-	private static World generate_World() {
-		World world = new World(300, 300, "Atlantis");
-		return world;
-	}
-
-	private static void start_Gui() {
-		GameScreenWerkzeugUI gui = new GameScreenWerkzeugUI();
-		gui.zeigeFenster();
-	}
 }
