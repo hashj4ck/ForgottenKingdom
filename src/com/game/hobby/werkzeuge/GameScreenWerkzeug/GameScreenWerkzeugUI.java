@@ -27,6 +27,8 @@ public class GameScreenWerkzeugUI {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * 
@@ -57,9 +59,9 @@ public class GameScreenWerkzeugUI {
 		_hauptAnzeigeWerkzeug.add(_textAnzeigeEigenschaftenWerkzeug, BorderLayout.EAST);
 		GridBagLayout gbl__textAnzeigeEigenschaftenWerkzeug = new GridBagLayout();
 		gbl__textAnzeigeEigenschaftenWerkzeug.columnWidths = new int[]{0, 0, 0};
-		gbl__textAnzeigeEigenschaftenWerkzeug.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl__textAnzeigeEigenschaftenWerkzeug.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		gbl__textAnzeigeEigenschaftenWerkzeug.columnWeights = new double[]{1.0, 1.0, 1.0};
-		gbl__textAnzeigeEigenschaftenWerkzeug.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl__textAnzeigeEigenschaftenWerkzeug.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		_textAnzeigeEigenschaftenWerkzeug.setLayout(gbl__textAnzeigeEigenschaftenWerkzeug);
 		
 		JLabel lblName = new JLabel("Name");
@@ -74,7 +76,7 @@ public class GameScreenWerkzeugUI {
 		JLabel lblNamensanzeige = new JLabel("Namensanzeige");
 		GridBagConstraints gbc_lblNamensanzeige = new GridBagConstraints();
 		gbc_lblNamensanzeige.anchor = GridBagConstraints.WEST;
-		gbc_lblNamensanzeige.insets = new Insets(0, 0, 5, 0);
+		gbc_lblNamensanzeige.insets = new Insets(5, 15, 5, 15);
 		gbc_lblNamensanzeige.gridx = 2;
 		gbc_lblNamensanzeige.gridy = 0;
 		_textAnzeigeEigenschaftenWerkzeug.add(lblNamensanzeige, gbc_lblNamensanzeige);
@@ -83,7 +85,7 @@ public class GameScreenWerkzeugUI {
 		lblGesundheit.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblGesundheit = new GridBagConstraints();
 		gbc_lblGesundheit.anchor = GridBagConstraints.WEST;
-		gbc_lblGesundheit.insets = new Insets(0, 0, 5, 5);
+		gbc_lblGesundheit.insets = new Insets(5, 15, 5, 15);
 		gbc_lblGesundheit.gridx = 0;
 		gbc_lblGesundheit.gridy = 1;
 		_textAnzeigeEigenschaftenWerkzeug.add(lblGesundheit, gbc_lblGesundheit);
@@ -91,7 +93,7 @@ public class GameScreenWerkzeugUI {
 		JProgressBar progressBar = new JProgressBar();
 		progressBar.setStringPainted(true);
 		GridBagConstraints gbc_progressBar = new GridBagConstraints();
-		gbc_progressBar.insets = new Insets(0, 0, 5, 0);
+		gbc_progressBar.insets = new Insets(5, 15, 5, 15);
 		gbc_progressBar.gridx = 2;
 		gbc_progressBar.gridy = 1;
 		_textAnzeigeEigenschaftenWerkzeug.add(progressBar, gbc_progressBar);
@@ -100,7 +102,7 @@ public class GameScreenWerkzeugUI {
 		lblAusdauer.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblAusdauer = new GridBagConstraints();
 		gbc_lblAusdauer.anchor = GridBagConstraints.WEST;
-		gbc_lblAusdauer.insets = new Insets(0, 0, 5, 5);
+		gbc_lblAusdauer.insets = new Insets(5, 15, 5, 15);
 		gbc_lblAusdauer.gridx = 0;
 		gbc_lblAusdauer.gridy = 2;
 		_textAnzeigeEigenschaftenWerkzeug.add(lblAusdauer, gbc_lblAusdauer);
@@ -108,7 +110,7 @@ public class GameScreenWerkzeugUI {
 		JProgressBar progressBar_1 = new JProgressBar();
 		progressBar_1.setStringPainted(true);
 		GridBagConstraints gbc_progressBar_1 = new GridBagConstraints();
-		gbc_progressBar_1.insets = new Insets(0, 0, 5, 0);
+		gbc_progressBar_1.insets = new Insets(5, 15, 5, 15);
 		gbc_progressBar_1.gridx = 2;
 		gbc_progressBar_1.gridy = 2;
 		_textAnzeigeEigenschaftenWerkzeug.add(progressBar_1, gbc_progressBar_1);
@@ -117,7 +119,7 @@ public class GameScreenWerkzeugUI {
 		lblErfahrung.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblErfahrung = new GridBagConstraints();
 		gbc_lblErfahrung.anchor = GridBagConstraints.WEST;
-		gbc_lblErfahrung.insets = new Insets(0, 0, 5, 5);
+		gbc_lblErfahrung.insets = new Insets(5, 15, 5, 15);
 		gbc_lblErfahrung.gridx = 0;
 		gbc_lblErfahrung.gridy = 3;
 		_textAnzeigeEigenschaftenWerkzeug.add(lblErfahrung, gbc_lblErfahrung);
@@ -125,7 +127,7 @@ public class GameScreenWerkzeugUI {
 		JProgressBar progressBar_2 = new JProgressBar();
 		progressBar_2.setStringPainted(true);
 		GridBagConstraints gbc_progressBar_2 = new GridBagConstraints();
-		gbc_progressBar_2.insets = new Insets(0, 0, 5, 0);
+		gbc_progressBar_2.insets = new Insets(5, 15, 5, 15);
 		gbc_progressBar_2.gridx = 2;
 		gbc_progressBar_2.gridy = 3;
 		_textAnzeigeEigenschaftenWerkzeug.add(progressBar_2, gbc_progressBar_2);
@@ -134,14 +136,15 @@ public class GameScreenWerkzeugUI {
 		lblXkoordinate.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblXkoordinate = new GridBagConstraints();
 		gbc_lblXkoordinate.anchor = GridBagConstraints.WEST;
-		gbc_lblXkoordinate.insets = new Insets(0, 0, 5, 5);
+		gbc_lblXkoordinate.insets = new Insets(5, 15, 5, 15);
 		gbc_lblXkoordinate.gridx = 0;
 		gbc_lblXkoordinate.gridy = 5;
 		_textAnzeigeEigenschaftenWerkzeug.add(lblXkoordinate, gbc_lblXkoordinate);
 		
 		textField_1 = new JTextField();
+		textField_1.setEditable(false);
 		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
-		gbc_textField_1.insets = new Insets(0, 0, 5, 0);
+		gbc_textField_1.insets = new Insets(5, 15, 5, 15);
 		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_1.gridx = 2;
 		gbc_textField_1.gridy = 5;
@@ -152,14 +155,15 @@ public class GameScreenWerkzeugUI {
 		lblYkoordinate.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblYkoordinate = new GridBagConstraints();
 		gbc_lblYkoordinate.anchor = GridBagConstraints.WEST;
-		gbc_lblYkoordinate.insets = new Insets(0, 0, 5, 5);
+		gbc_lblYkoordinate.insets = new Insets(5, 15, 5, 15);
 		gbc_lblYkoordinate.gridx = 0;
 		gbc_lblYkoordinate.gridy = 6;
 		_textAnzeigeEigenschaftenWerkzeug.add(lblYkoordinate, gbc_lblYkoordinate);
 		
 		textField_2 = new JTextField();
+		textField_2.setEditable(false);
 		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
-		gbc_textField_2.insets = new Insets(0, 0, 5, 0);
+		gbc_textField_2.insets = new Insets(5, 15, 5, 15);
 		gbc_textField_2.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_2.gridx = 2;
 		gbc_textField_2.gridy = 6;
@@ -170,17 +174,40 @@ public class GameScreenWerkzeugUI {
 		lblOrt.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_lblOrt = new GridBagConstraints();
 		gbc_lblOrt.anchor = GridBagConstraints.WEST;
-		gbc_lblOrt.insets = new Insets(0, 0, 0, 5);
+		gbc_lblOrt.insets = new Insets(5, 15, 5, 15);
 		gbc_lblOrt.gridx = 0;
 		gbc_lblOrt.gridy = 7;
 		_textAnzeigeEigenschaftenWerkzeug.add(lblOrt, gbc_lblOrt);
 		
-		JLabel lblNewLabel = new JLabel("Teststadt");
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel.gridx = 2;
-		gbc_lblNewLabel.gridy = 7;
-		_textAnzeigeEigenschaftenWerkzeug.add(lblNewLabel, gbc_lblNewLabel);
+		textField_3 = new JTextField();
+		textField_3.setEditable(false);
+		textField_3.setHorizontalAlignment(SwingConstants.CENTER);
+		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
+		gbc_textField_3.insets = new Insets(5, 15, 5, 15);
+		gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_3.gridx = 2;
+		gbc_textField_3.gridy = 7;
+		_textAnzeigeEigenschaftenWerkzeug.add(textField_3, gbc_textField_3);
+		textField_3.setColumns(10);
+		
+		JLabel lblUhrzeit = new JLabel("Uhrzeit");
+		GridBagConstraints gbc_lblUhrzeit = new GridBagConstraints();
+		gbc_lblUhrzeit.anchor = GridBagConstraints.WEST;
+		gbc_lblUhrzeit.insets = new Insets(5, 15, 0, 15);
+		gbc_lblUhrzeit.gridx = 0;
+		gbc_lblUhrzeit.gridy = 8;
+		_textAnzeigeEigenschaftenWerkzeug.add(lblUhrzeit, gbc_lblUhrzeit);
+		
+		textField_4 = new JTextField();
+		textField_4.setEditable(false);
+		textField_4.setHorizontalAlignment(SwingConstants.CENTER);
+		GridBagConstraints gbc_textField_4 = new GridBagConstraints();
+		gbc_textField_4.insets = new Insets(5, 15, 5, 15);
+		gbc_textField_4.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_4.gridx = 2;
+		gbc_textField_4.gridy = 8;
+		_textAnzeigeEigenschaftenWerkzeug.add(textField_4, gbc_textField_4);
+		textField_4.setColumns(10);
 
 		JMenuBar menuBar = new JMenuBar();
 		_frame.setJMenuBar(menuBar);
