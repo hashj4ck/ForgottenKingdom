@@ -12,6 +12,6 @@ package com.game.hobby.services;
  *
  *
  */
-public class dummy {
-
+public class WorldGenerator {
+	
 }
