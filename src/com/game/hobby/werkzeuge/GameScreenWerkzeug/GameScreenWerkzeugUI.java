@@ -92,8 +92,9 @@ public class GameScreenWerkzeugUI {
 		textField_2 = new JTextField();
 		textField_2.setEditable(false);
 		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
+		gbc_textField_2.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_2.insets = new Insets(5, _achor_left, 5, 15);
-		gbc_textField_2.anchor = GridBagConstraints.NORTHWEST;
+		gbc_textField_2.anchor = GridBagConstraints.NORTH;
 		gbc_textField_2.gridx = 2;
 		gbc_textField_2.gridy = 1;
 		panel_east.add(textField_2, gbc_textField_2);
