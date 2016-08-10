@@ -2,6 +2,7 @@ package com.game.hobby.werkzeuge.GameScreenWerkzeug;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -15,6 +16,8 @@ import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GameScreenWerkzeugUI {
 
@@ -27,6 +30,8 @@ public class GameScreenWerkzeugUI {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+
+	private int _achor_left = 10;
 
 	/**
 	 * 
@@ -45,7 +50,7 @@ public class GameScreenWerkzeugUI {
 		textField_1 = new JTextField();
 		panel_south.add(textField_1, BorderLayout.CENTER);
 		textField_1.setColumns(10);
-		
+
 		JButton btnNewButton = new JButton("Aktion");
 		panel_south.add(btnNewButton, BorderLayout.EAST);
 
@@ -68,7 +73,7 @@ public class GameScreenWerkzeugUI {
 		lblLandkarte.setForeground(Color.BLACK);
 		lblLandkarte.setFont(new Font("Monospaced", Font.BOLD, 18));
 		GridBagConstraints gbc_lblLandkarte = new GridBagConstraints();
-		gbc_lblLandkarte.insets = new Insets(5, 15, 5, 15);
+		gbc_lblLandkarte.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_lblLandkarte.anchor = GridBagConstraints.NORTHWEST;
 		gbc_lblLandkarte.gridx = 1;
 		gbc_lblLandkarte.gridy = 0;
@@ -79,7 +84,7 @@ public class GameScreenWerkzeugUI {
 		lblNewLabel.setForeground(Color.BLACK);
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblNewLabel.insets = new Insets(5, 15, 5, 15);
+		gbc_lblNewLabel.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_lblNewLabel.gridx = 1;
 		gbc_lblNewLabel.gridy = 1;
 		panel_east.add(lblNewLabel, gbc_lblNewLabel);
@@ -87,7 +92,7 @@ public class GameScreenWerkzeugUI {
 		textField_2 = new JTextField();
 		textField_2.setEditable(false);
 		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
-		gbc_textField_2.insets = new Insets(5, 15, 5, 15);
+		gbc_textField_2.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_textField_2.anchor = GridBagConstraints.NORTHWEST;
 		gbc_textField_2.gridx = 2;
 		gbc_textField_2.gridy = 1;
@@ -99,7 +104,7 @@ public class GameScreenWerkzeugUI {
 		lblYkoordinate.setForeground(Color.BLACK);
 		GridBagConstraints gbc_lblYkoordinate = new GridBagConstraints();
 		gbc_lblYkoordinate.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblYkoordinate.insets = new Insets(5, 15, 5, 15);
+		gbc_lblYkoordinate.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_lblYkoordinate.gridx = 1;
 		gbc_lblYkoordinate.gridy = 2;
 		panel_east.add(lblYkoordinate, gbc_lblYkoordinate);
@@ -107,7 +112,7 @@ public class GameScreenWerkzeugUI {
 		textField_3 = new JTextField();
 		textField_3.setEditable(false);
 		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
-		gbc_textField_3.insets = new Insets(5, 15, 5, 15);
+		gbc_textField_3.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_3.gridx = 2;
 		gbc_textField_3.gridy = 2;
@@ -119,7 +124,7 @@ public class GameScreenWerkzeugUI {
 		lblCharakter.setFont(new Font("Monospaced", Font.BOLD, 18));
 		GridBagConstraints gbc_lblCharakter = new GridBagConstraints();
 		gbc_lblCharakter.anchor = GridBagConstraints.WEST;
-		gbc_lblCharakter.insets = new Insets(5, 15, 5, 15);
+		gbc_lblCharakter.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_lblCharakter.gridx = 1;
 		gbc_lblCharakter.gridy = 4;
 		panel_east.add(lblCharakter, gbc_lblCharakter);
@@ -129,7 +134,7 @@ public class GameScreenWerkzeugUI {
 		lblGesundheit.setForeground(Color.BLACK);
 		GridBagConstraints gbc_lblGesundheit = new GridBagConstraints();
 		gbc_lblGesundheit.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblGesundheit.insets = new Insets(5, 15, 5, 15);
+		gbc_lblGesundheit.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_lblGesundheit.gridx = 1;
 		gbc_lblGesundheit.gridy = 5;
 		panel_east.add(lblGesundheit, gbc_lblGesundheit);
@@ -139,7 +144,7 @@ public class GameScreenWerkzeugUI {
 		progressBar.setStringPainted(true);
 		progressBar.setValue(75);
 		GridBagConstraints gbc_progressBar = new GridBagConstraints();
-		gbc_progressBar.insets = new Insets(5, 15, 5, 15);
+		gbc_progressBar.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_progressBar.gridx = 2;
 		gbc_progressBar.gridy = 5;
 		panel_east.add(progressBar, gbc_progressBar);
@@ -149,7 +154,7 @@ public class GameScreenWerkzeugUI {
 		lblAusdauer.setForeground(Color.BLACK);
 		GridBagConstraints gbc_lblAusdauer = new GridBagConstraints();
 		gbc_lblAusdauer.anchor = GridBagConstraints.NORTHWEST;
-		gbc_lblAusdauer.insets = new Insets(5, 15, 5, 15);
+		gbc_lblAusdauer.insets = new Insets(5, _achor_left, 5, 15);
 		gbc_lblAusdauer.gridx = 1;
 		gbc_lblAusdauer.gridy = 6;
 		panel_east.add(lblAusdauer, gbc_lblAusdauer);
@@ -164,6 +169,23 @@ public class GameScreenWerkzeugUI {
 		gbc_progressBar_1.gridx = 2;
 		gbc_progressBar_1.gridy = 6;
 		panel_east.add(progressBar_1, gbc_progressBar_1);
+		
+		JButton openmap = new JButton("show Map");
+		openmap.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JFrame mapframe = new JFrame("Map - ForgottenWorld");
+				mapframe.setSize(800, 600);
+				mapframe.setVisible(true);
+			}
+		});
+		openmap.setFont(new Font("Monospaced", Font.PLAIN, 18));
+		openmap.setForeground(Color.BLACK);
+		GridBagConstraints gbc_openmap = new GridBagConstraints();
+		gbc_openmap.anchor = GridBagConstraints.SOUTHEAST;
+		gbc_openmap.insets = new Insets(5, _achor_left, 5, 15);
+		gbc_openmap.gridx = 1;
+		gbc_openmap.gridy = 8;
+		panel_east.add(openmap, gbc_openmap);
 
 		JPanel panel_north = new JPanel();
 		_frame.getContentPane().add(panel_north, BorderLayout.NORTH);
@@ -172,14 +194,14 @@ public class GameScreenWerkzeugUI {
 		JPanel panel_center = new JPanel();
 		_frame.getContentPane().add(panel_center, BorderLayout.CENTER);
 		panel_center.setLayout(new BorderLayout(0, 0));
-		
-		
+
 		JTextPane textPane = new JTextPane();
+		textPane.setPreferredSize(new Dimension(600, 850));
 		textPane.setFont(new Font("Monospaced", Font.BOLD, 20));
 		panel_center.add(textPane, BorderLayout.CENTER);
 		textPane.setBackground(Color.BLACK);
 		textPane.setForeground(Color.WHITE);
-		
+
 		JScrollPane scrollPane = new JScrollPane(textPane);
 		panel_center.add(scrollPane, BorderLayout.CENTER);
 
@@ -188,8 +210,8 @@ public class GameScreenWerkzeugUI {
 	/**
 	 * Zeigt das Fenster an
 	 */
-	void zeigeFenster() {
-		_frame.setSize(525, 335);
+	public void zeigeFenster() {
+		_frame.setSize(1367, 768);
 		_frame.setVisible(true);
 	}
 
